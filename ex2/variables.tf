@@ -7,23 +7,27 @@ variable "secret_key" {
 variable "region" {
   type = string
 }
-
-variable "availability_zones" {
-  type = list(string)
-}
-
-variable "cidr_block" {
+variable "cidr_vpc" {
   type = string
 }
-
-variable "instance_type" {
+variable "cidr_subnet_public_a" {
   type = string
 }
-
+variable "cidr_subnet_public_b" {
+  type = string
+}
+variable "cidr_subnet_private_a" {
+  type = string
+}
+variable "cidr_subnet_private_b" {
+  type = string
+}
 variable "key_name" {
   type = string
 }
-
+variable "instance_type" {
+  type = string
+}
 variable "webserver_sg_rules" {
   type = object({
     ingress_rules = list(object({
